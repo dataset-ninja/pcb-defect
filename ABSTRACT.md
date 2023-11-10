@@ -1,14 +1,18 @@
 **PCB Defect** is a dataset tailored for an object detection task, encompassing 693 images annotated with 2953 labeled objects across six distinct classes: *open_circuit*, *short*, *spurious_copper*, and other nuanced defects such as *missing_hole*, *mouse_bite*, and *spur*. Specifically curated for **Tiny Defect Detection (TDD)**, the dataset is instrumental for advancing quality control measures in the production of printed circuit boards (PCBs), which is a fundamental and crucial aspect of manufacturing processes in the electronics industry. 
 
-PCB defects can be divided into two categories: functional defects and cosmetic defects. Functional defects can seriously affect the performance of PCB, which may lead to the abnormal usage of PCBs. These defects are the most serious defects. Cosmetic defects mainly affect the appearance of PCB, but also damage its performance in the long run due to abnormal heat dissipation and distribution of current. Among the two categories, there are six kinds of defects which frequently appear in the actual industrial scene. Here, authors mainly study these six known and common defects which contain missing hole, mouse bite, open circuit, short, spur, and spurious copper.
+To ensure the representativeness of the dataset, authors build a PCB image acquisition system that resembles the practical AOI system used in inspection process.
 
-<img src="https://github.com/dataset-ninja/pcb-defect/assets/123257559/41f4d3ff-ba8b-400e-bef7-472977ba3ae5" alt="image" width="500">
+<img width="544" alt="pcb_defects_preview_1" src="https://github.com/dataset-ninja/pcb-defect/assets/123257559/aff3d4f1-83e0-4a78-b690-2c5c6e124e8b">
 
-<span style="font-size: smaller; font-style: italic;">Some defects examples - a: Missing hole, b: Mouse bite, c: Open circuit, d: Short, e: Spur, f: Spurious copper.</span>
+<span style="font-size: smaller; font-style: italic;">The PCB image acquisition system consisting of light source, workbench, support, camera and image process unit.</span>
 
-In this figure, defect areas are indicated by thicker and red outlines.
+The image of template board is captured by a 16-megapixel HD industrial camera equipped with CMOS sensor, and it can be controlled by computer software or a remote control. In order to adapt to different PCB sizes and avoid edge distortion, an undistorted zoomable industrial lens is also mounted, the focal length can be adjusted between 6-12 mm and the maximum aperture is <i>f1.6</i>. Light source is also a key part of AOI, to avoid specular reflection of the board, possible shadows and minimize the effects of uneven illumination on subsequent steps, two frosted ring LED source equipped with special diffuse matting board are introduced to effectively overcome the adverse effects of illumination. The resolution of original photo is 4608×3456 pixels, which will be adjusted according to the size of each board when make defects.
 
-PCB Defect dataset contains 693 PCB defective images and corresponding annotation files. For this dataset, the average pixel size of each image is <i>2,777 x 2,138</i>. The PCB defects include 6 classes (missing hole, mouse bite, open circuit, short, spur, and spurious copper). One image contains several defects. 
+After getting cropped image, we make 6 types of defects by photoshop, which is a graphics editor published by Adobe Systems. The defects we defined are: missing hole, mouse bite, open circuit, short, spur, spurious copper. Each image in the dataset has 3 to 5 defects of the same category in different places. Besides, we provide bounding box and coordinate information for every defect in every image, which is convenient for other researchers to know where the defect is. On some inspection platforms, PCB can be fixed by mechanical devices to maintain good position. However, on the assembly line, without fixing equipments, the position and the angle of the test PCB in the taken photo may distinguish from each other. Given this circumstance, in addition to the defects images with the same position as the templates, we also provide images with random orientations to represent the situation where the image is not appropriately placed in practical detection process. The angular difference between each image and the corresponding template image is also given so that the designing and evaluating of registration algorithm could be implemented on these images.
+
+<img width="416" alt="pcb_defect_preview_2" src="https://github.com/dataset-ninja/pcb-defect/assets/123257559/e7e096db-88c1-47e4-ad06-dbe83c5f5b1b">
+
+<span style="font-size: smaller; font-style: italic;"> Samples of the PCB with defects in the dataset, (a) is the defects image with the same position as template, (b) is the image with random orientation.</span>
 
 | Type of Defects   | Number of Images | Number of Defects |
 |-------------------|------------------:|-------------------:|
@@ -20,4 +24,4 @@ PCB Defect dataset contains 693 PCB defective images and corresponding annotatio
 | Spurious Copper   | 116              | 503               |
 | **Total**         | **693**          | **2953**           |
 
-With the respect of such small dataset, data augmentation techniques are adopted before data training. The images are then cropped into 600 × 600 sub-images, forming the training set and testing set with 9920 and 2508 images, respectively. Augmented PCB Defect also [available on DatasetNinja](https://datasetninja.com/augmented-pcb-defect)
+Also you can check **Augmented PCB Defect** [available on DatasetNinja](https://datasetninja.com/augmented-pcb-defect) based on this dataset.
