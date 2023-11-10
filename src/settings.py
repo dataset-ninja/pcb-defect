@@ -31,7 +31,7 @@ RELEASE_DATE: Optional[str] = "2019-02-22"  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
     RELEASE_YEAR: int = None
 
-HOMEPAGE_URL: str = "https://github.com/Ixiaohuihuihui/Tiny-Defect-Detection-for-PCB"
+HOMEPAGE_URL: str = "https://paperswithcode.com/paper/a-pcb-dataset-for-defects-detection-and"
 # e.g. "https://some.com/dataset/homepage"
 
 PREVIEW_IMAGE_ID: int = 8468893
@@ -51,19 +51,19 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = ["https://www.researchgate.net/publication/332642034_TDD-Net_A_Tiny_Defect_Detection_Network_for_Printed_Circuit_Boards"]
+PAPER: Optional[Union[str, List[str], Dict[str, str]]] = ["https://arxiv.org/abs/1901.08204"]
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
 REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"Kaggle":"https://www.kaggle.com/datasets/akhatova/pcb-defects"}
 
-CITATION_URL: Optional[str] = "https://www.researchgate.net/publication/332642034_TDD-Net_A_Tiny_Defect_Detection_Network_for_Printed_Circuit_Boards"
-AUTHORS: Optional[List[str]] = ['Runwei Ding', 'Linhui Dai', 'Guangpeng Li', 'Hong Liu']
-AUTHORS_CONTACTS: Optional[List[str]] = ["dailinhui@pku.edu.cn"]
+CITATION_URL: Optional[str] = "https://arxiv.org/abs/1901.08204"
+AUTHORS: Optional[List[str]] = ['Weibo Huang', 'Peng Wei']
+AUTHORS_CONTACTS: Optional[List[str]] = None
 
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = ["Peking University", "Shenzhen Skyworth-RGB Electronic, China"]
-ORGANIZATION_URL: Optional[Union[str, List[str]]] = ["https://english.pkusz.edu.cn/", "http://www.skyworth.com"]
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = ["Peking University"]
+ORGANIZATION_URL: Optional[Union[str, List[str]]] = ["https://english.pkusz.edu.cn/"]
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
-SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = None
+SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {"__POSTTEXT__": "Also, the dataset includes ***subfolder*** and ***angle*** tags for *rotation* slit"}
 TAGS: Optional[List[str]] = None
 
 
