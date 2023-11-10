@@ -26,4 +26,4 @@ Moreover, *rotation* split has PCB images with orientations, and rotation ***ang
 | Spurious Copper   | 116              | 503               |
 | **Total**         | **693**          | **2953**           |
 
-Also you can check **Augmented PCB Defect** [available on DatasetNinja](https://datasetninja.com/augmented-pcb-defect) based on this dataset.
+Also, you can check the **Augmented PCB Defect** [available on DatasetNinja](https://datasetninja.com/augmented-pcb-defect) based on this dataset.
