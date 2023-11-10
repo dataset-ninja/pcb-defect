@@ -14,6 +14,8 @@ After getting cropped image, we make 6 types of defects by photoshop, which is a
 
 <span style="font-size: smaller; font-style: italic;"> Samples of the PCB with defects in the dataset, (a) is the defects image with the same position as template, (b) is the image with random orientation.</span>
 
+Moreover, *rotation* split has PCB images with orientations, and rotation ***angles***
+
 | Type of Defects   | Number of Images | Number of Defects |
 |-------------------|------------------:|-------------------:|
 | Missing Hole      | 115              | 497               |
@@ -23,5 +25,5 @@ After getting cropped image, we make 6 types of defects by photoshop, which is a
 | Spur              | 115              | 488               |
 | Spurious Copper   | 116              | 503               |
 | **Total**         | **693**          | **2953**           |
-
+*rotation* (693 images)
 Also you can check **Augmented PCB Defect** [available on DatasetNinja](https://datasetninja.com/augmented-pcb-defect) based on this dataset.
